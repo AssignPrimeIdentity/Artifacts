@@ -18,7 +18,7 @@
 \brief Implements the XlfRef class.
 */
 
-// $Id$
+// $Id: XlfRef.cpp 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfRef.h>
 #include <xlw/XlfOper.h>

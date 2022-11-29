@@ -22,7 +22,7 @@
 \brief Declares the XlfRef class.
 */
 
-// $Id$
+// $Id: XlfRef.h 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/EXCEL32_API.h>
 #include <xlw/xlcall32.h>

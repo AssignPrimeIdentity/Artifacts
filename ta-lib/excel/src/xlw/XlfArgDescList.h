@@ -21,7 +21,7 @@
 \brief Declares class XlfArgDescList.
 */
 
-// $Id$
+// $Id: XlfArgDescList.h 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfArgDesc.h>
 #include <list>

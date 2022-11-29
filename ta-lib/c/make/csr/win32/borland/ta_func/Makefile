@@ -28,7 +28,6 @@ RES_FILE =
 
 HEADERS =	
 SOURCES =	..\..\..\..\..\src\ta_func\ta_utility.c \
-		..\..\..\..\..\src\ta_func\ta_ACCBANDS.c \
 		..\..\..\..\..\src\ta_func\ta_ACOS.c \
 		..\..\..\..\..\src\ta_func\ta_AD.c \
 		..\..\..\..\..\src\ta_func\ta_ADD.c \
@@ -188,7 +187,6 @@ SOURCES =	..\..\..\..\..\src\ta_func\ta_utility.c \
 		..\..\..\..\..\src\ta_func\ta_WILLR.c \
 		..\..\..\..\..\src\ta_func\ta_WMA.c
 OBJECTS =	..\..\..\..\..\temp\csr\ta_utility.obj \
-		..\..\..\..\..\temp\csr\ta_ACCBANDS.obj \
 		..\..\..\..\..\temp\csr\ta_ACOS.obj \
 		..\..\..\..\..\temp\csr\ta_AD.obj \
 		..\..\..\..\..\temp\csr\ta_ADD.obj \
@@ -380,7 +378,6 @@ $(TARGET): $(UICDECLS) $(OBJECTS) $(OBJMOC)
 	-del $(TARGET)
 	$(LIB) $(TARGET) @&&|
 +..\..\..\..\..\temp\csr\ta_utility.obj \
-+..\..\..\..\..\temp\csr\ta_ACCBANDS.obj \
 +..\..\..\..\..\temp\csr\ta_ACOS.obj \
 +..\..\..\..\..\temp\csr\ta_AD.obj \
 +..\..\..\..\..\temp\csr\ta_ADD.obj \
@@ -554,7 +551,6 @@ dist:
 
 clean:
 	-del ..\..\..\..\..\temp\csr\ta_utility.obj
-	-del ..\..\..\..\..\temp\csr\ta_ACCBANDS.obj
 	-del ..\..\..\..\..\temp\csr\ta_ACOS.obj
 	-del ..\..\..\..\..\temp\csr\ta_AD.obj
 	-del ..\..\..\..\..\temp\csr\ta_ADD.obj
@@ -732,9 +728,6 @@ clean:
 
 ..\..\..\..\..\temp\csr\ta_utility.obj: ..\..\..\..\..\src\ta_func\ta_utility.c
 	$(CC) -c $(CFLAGS) $(INCPATH) -o..\..\..\..\..\temp\csr\ta_utility.obj ..\..\..\..\..\src\ta_func\ta_utility.c
-
-..\..\..\..\..\temp\csr\ta_ACCBANDS.obj: ..\..\..\..\..\src\ta_func\ta_ACCBANDS.c
-	$(CC) -c $(CFLAGS) $(INCPATH) -o..\..\..\..\..\temp\csr\ta_ACCBANDS.obj ..\..\..\..\..\src\ta_func\ta_ACCBANDS.c
 
 ..\..\..\..\..\temp\csr\ta_ACOS.obj: ..\..\..\..\..\src\ta_func\ta_ACOS.c
 	$(CC) -c $(CFLAGS) $(INCPATH) -o..\..\..\..\..\temp\csr\ta_ACOS.obj ..\..\..\..\..\src\ta_func\ta_ACOS.c

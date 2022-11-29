@@ -68,15 +68,14 @@ class Main
 {
    public static void main(String[] args) {
        try {
-		String sep = System.getProperty("file.separator");
-         String inFile = ".." + sep + "temp" + sep + "CoreJavaUnformated.tmp";
-	 String outFile = ".." + sep + "temp" + sep + "CoreJavaPretty.tmp"; 
+         String inFile = "..\\temp\\CoreJavaUnformated.tmp";
+	 String outFile = "..\\temp\\CoreJavaPretty.tmp"; 
          new PrettyCode(inFile,outFile).process().close();
          if( PrettyCode.verify(inFile,outFile) ){
 	    /* Create a file when all done. The "caller" gen_code will 
 	     * look for that file to confirm success.
 	     */
-            PrintWriter out = new PrintWriter(".." + sep + "temp" + sep + "java_success");
+            PrintWriter out = new PrintWriter("..\\temp\\java_success");
 	    out.print("OK");
 	    out.close();            
          }         

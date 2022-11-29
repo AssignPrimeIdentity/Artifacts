@@ -1,4 +1,4 @@
-/* TA-LIB Copyright (c) 1999-2008, Mario Fortier
+/* TA-LIB Copyright (c) 1999-2007, Mario Fortier
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or
@@ -88,8 +88,8 @@
 /* Generated */                          double        optInNbDev )  /* From TA_REAL_MIN to TA_REAL_MAX */
 /* Generated */ 
 /* Generated */ #else
-/* Generated */ TA_LIB_API int TA_STDDEV_Lookback( int           optInTimePeriod, /* From 2 to 100000 */
-/* Generated */                                             double        optInNbDev )  /* From TA_REAL_MIN to TA_REAL_MAX */
+/* Generated */ int TA_STDDEV_Lookback( int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                       double        optInNbDev )  /* From TA_REAL_MIN to TA_REAL_MAX */
 /* Generated */ 
 /* Generated */ #endif
 /**** END GENCODE SECTION 1 - DO NOT DELETE THIS LINE ****/
@@ -139,12 +139,12 @@
 /* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY )
 /* Generated */ enum class Core::RetCode Core::StdDev( int    startIdx,
 /* Generated */                                        int    endIdx,
-/* Generated */                                        SubArray<double>^ inReal,
+/* Generated */                                        SubArray^    inReal,
 /* Generated */                                        int           optInTimePeriod, /* From 2 to 100000 */
 /* Generated */                                        double        optInNbDev, /* From TA_REAL_MIN to TA_REAL_MAX */
 /* Generated */                                        [Out]int%    outBegIdx,
 /* Generated */                                        [Out]int%    outNBElement,
-/* Generated */                                        SubArray<double>^  outReal )
+/* Generated */                                        cli::array<double>^  outReal )
 /* Generated */ #elif defined( _MANAGED )
 /* Generated */ enum class Core::RetCode Core::StdDev( int    startIdx,
 /* Generated */                                        int    endIdx,
@@ -164,14 +164,14 @@
 /* Generated */                        MInteger     outNBElement,
 /* Generated */                        double        outReal[] )
 /* Generated */ #else
-/* Generated */ TA_LIB_API TA_RetCode TA_STDDEV( int    startIdx,
-/* Generated */                                  int    endIdx,
-/* Generated */                                             const double inReal[],
-/* Generated */                                             int           optInTimePeriod, /* From 2 to 100000 */
-/* Generated */                                             double        optInNbDev, /* From TA_REAL_MIN to TA_REAL_MAX */
-/* Generated */                                             int          *outBegIdx,
-/* Generated */                                             int          *outNBElement,
-/* Generated */                                             double        outReal[] )
+/* Generated */ TA_RetCode TA_STDDEV( int    startIdx,
+/* Generated */                       int    endIdx,
+/* Generated */                       const double inReal[],
+/* Generated */                       int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                       double        optInNbDev, /* From TA_REAL_MIN to TA_REAL_MAX */
+/* Generated */                       int          *outBegIdx,
+/* Generated */                       int          *outNBElement,
+/* Generated */                       double        outReal[] )
 /* Generated */ #endif
 /**** END GENCODE SECTION 3 - DO NOT DELETE THIS LINE ****/
 {
@@ -254,10 +254,6 @@
    return ENUM_VALUE(RetCode,TA_SUCCESS,Success);
 }
 
-#if defined( _MANAGED ) && defined( USE_SUBARRAY ) && defined( USE_SINGLE_PRECISION_INPUT )
-   // No INT function
-#else
-
 /* The inMovAvg is the moving average of the inReal. 
  *
  * inMovAvgBegIdx is relative to inReal, in other word
@@ -272,13 +268,13 @@
  *       average. Still the function is put here because it is 
  *       closely related.
  */
-#if defined( _MANAGED ) && defined( USE_SUBARRAY )
-void Core::TA_INT_stddev_using_precalc_ma( SubArray<double>^ inReal,
-										SubArray<double>^ inMovAvg,
+#if defined( _MANAGED ) && defined( USE_SUBARRAY ) && !defined(USE_SINGLE_PRECISION_INPUT)
+void Core::TA_INT_stddev_using_precalc_ma( SubArray^ inReal,
+										cli::array<double>^ inMovAvg,
                                         int inMovAvgBegIdx,                                    
                                         int inMovAvgNbElement,
                                         int timePeriod,
-										SubArray<double>^ output)
+										cli::array<double>^ output)
 #elif defined( _MANAGED )
 void Core::TA_INT_stddev_using_precalc_ma( cli::array<INPUT_TYPE>^ inReal,
 										cli::array<double>^ inMovAvg,
@@ -341,29 +337,17 @@ void TA_PREFIX(INT_stddev_using_precalc_ma)( const INPUT_TYPE *inReal,
          output[outIdx] = (double)0.0;
    }
 }
-#endif // Not defined( _MANAGED ) && defined( USE_SUBARRAY ) && defined( USE_SINGLE_PRECISION_INPUT )
-
 
 /**** START GENCODE SECTION 5 - DO NOT DELETE THIS LINE ****/
 /* Generated */ 
 /* Generated */ #define  USE_SINGLE_PRECISION_INPUT
-/* Generated */ #undef  TA_LIB_PRO
 /* Generated */ #if !defined( _MANAGED ) && !defined( _JAVA )
 /* Generated */    #undef   TA_PREFIX
 /* Generated */    #define  TA_PREFIX(x) TA_S_##x
 /* Generated */ #endif
 /* Generated */ #undef   INPUT_TYPE
 /* Generated */ #define  INPUT_TYPE float
-/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY )
-/* Generated */ enum class Core::RetCode Core::StdDev( int    startIdx,
-/* Generated */                                        int    endIdx,
-/* Generated */                                        SubArray<float>^ inReal,
-/* Generated */                                        int           optInTimePeriod, /* From 2 to 100000 */
-/* Generated */                                        double        optInNbDev, /* From TA_REAL_MIN to TA_REAL_MAX */
-/* Generated */                                        [Out]int%    outBegIdx,
-/* Generated */                                        [Out]int%    outNBElement,
-/* Generated */                                        SubArray<double>^  outReal )
-/* Generated */ #elif defined( _MANAGED )
+/* Generated */ #if defined( _MANAGED )
 /* Generated */ enum class Core::RetCode Core::StdDev( int    startIdx,
 /* Generated */                                        int    endIdx,
 /* Generated */                                        cli::array<float>^ inReal,
@@ -445,16 +429,13 @@ void TA_PREFIX(INT_stddev_using_precalc_ma)( const INPUT_TYPE *inReal,
 /* Generated */    }
 /* Generated */    return ENUM_VALUE(RetCode,TA_SUCCESS,Success);
 /* Generated */ }
-/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY ) && defined( USE_SINGLE_PRECISION_INPUT )
-/* Generated */    // No INT function
-/* Generated */ #else
-/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY )
-/* Generated */ void Core::TA_INT_stddev_using_precalc_ma( SubArray<double>^ inReal,
-/* Generated */ 										SubArray<double>^ inMovAvg,
+/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY ) && !defined(USE_SINGLE_PRECISION_INPUT)
+/* Generated */ void Core::TA_INT_stddev_using_precalc_ma( SubArray^ inReal,
+/* Generated */ 										cli::array<double>^ inMovAvg,
 /* Generated */                                         int inMovAvgBegIdx,                                    
 /* Generated */                                         int inMovAvgNbElement,
 /* Generated */                                         int timePeriod,
-/* Generated */ 										SubArray<double>^ output)
+/* Generated */ 										cli::array<double>^ output)
 /* Generated */ #elif defined( _MANAGED )
 /* Generated */ void Core::TA_INT_stddev_using_precalc_ma( cli::array<INPUT_TYPE>^ inReal,
 /* Generated */ 										cli::array<double>^ inMovAvg,
@@ -508,7 +489,6 @@ void TA_PREFIX(INT_stddev_using_precalc_ma)( const INPUT_TYPE *inReal,
 /* Generated */          output[outIdx] = (double)0.0;
 /* Generated */    }
 /* Generated */ }
-/* Generated */ #endif // Not defined( _MANAGED ) && defined( USE_SUBARRAY ) && defined( USE_SINGLE_PRECISION_INPUT )
 /* Generated */ 
 /* Generated */ #if defined( _MANAGED )
 /* Generated */ }}} // Close namespace TicTacTec.TA.Lib

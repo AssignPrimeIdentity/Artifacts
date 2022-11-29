@@ -13,7 +13,7 @@ not really constitute a part of the wrapper but rather the
 basis of it.
 */
 
-// $Id$
+// $Id: xlcall32.h 152 2003-04-20 04:42:47Z fortier $
 
 #ifndef INC_excel32_H
 #define INC_excel32_H

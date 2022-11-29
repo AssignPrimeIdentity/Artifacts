@@ -21,7 +21,7 @@
 \brief I am not a big fan of macros, but these make life easier.
 */
 
-// $Id$
+// $Id: macros.h 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfException.h>
 #include <xlw/XlfExcel.h>

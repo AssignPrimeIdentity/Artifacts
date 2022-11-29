@@ -18,7 +18,7 @@
 \brief Implements the classes XlfExcel.
 */
 
-// $Id$
+// $Id: XlfExcel.cpp 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfExcel.h>
 #ifdef PORT_USE_OLD_C_HEADERS

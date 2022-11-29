@@ -13,7 +13,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-// $Id$
+// $Id: XlfAbstractCmdDesc.inl 152 2003-04-20 04:42:47Z fortier $
 
 #ifndef NDEBUG
 #define INLINE inline

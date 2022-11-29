@@ -347,10 +347,6 @@
 				Name="ta_func"
 				>
 				<File
-					RelativePath="..\..\..\..\src\ta_func\ta_ACCBANDS.c"
-					>
-				</File>
-				<File
 					RelativePath="..\..\..\..\src\ta_func\ta_ACOS.c"
 					>
 				</File>
@@ -400,10 +396,6 @@
 				</File>
 				<File
 					RelativePath="..\..\..\..\src\ta_func\ta_AVGPRICE.c"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\..\src\ta_func\ta_AVGDEV.c"
 					>
 				</File>
 				<File
@@ -732,10 +724,6 @@
 				</File>
 				<File
 					RelativePath="..\..\..\..\src\ta_func\ta_HT_TRENDMODE.c"
-					>
-				</File>
-				<File
-					RelativePath="..\..\..\..\src\ta_func\ta_IMI.c"
 					>
 				</File>
 				<File

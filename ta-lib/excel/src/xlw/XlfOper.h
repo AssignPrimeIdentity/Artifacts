@@ -21,7 +21,7 @@
 \brief Declares class XlfOper.
 */
 
-// $Id$
+// $Id: XlfOper.h 1417 2007-03-18 03:43:33Z fortier $
 
 #include <xlw/EXCEL32_API.h>
 #include <xlw/xlcall32.h>

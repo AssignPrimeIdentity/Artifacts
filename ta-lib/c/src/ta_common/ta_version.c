@@ -1,4 +1,4 @@
-/* TA-LIB Copyright (c) 1999-2008, Mario Fortier
+/* TA-LIB Copyright (c) 1999-2007, Mario Fortier
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or
@@ -39,21 +39,16 @@
  * Should be modified only by TA-Lib.org
  */
 #define MAJOR "0"
-#define MINOR "6"
+#define MINOR "4"
 #define BUILD "0"
-#define EXTRA "dev"
 
 /* Nothing to modify below this line. */
 
-#define TA_VERSION_DT "(" __DATE__ " " __TIME__ ")"
+#define TA_VERSION_STRING(maj,min,build,date,time) maj"."min"."build" ("date" "time")"
 
 const char  *TA_GetVersionString( void )
 {
-	if (sizeof(EXTRA) > 1) {
-		return MAJOR "." MINOR "." BUILD "-" EXTRA " " TA_VERSION_DT;
-	} else {
-		return MAJOR "." MINOR "." BUILD " " TA_VERSION_DT;
-	}
+    return TA_VERSION_STRING(MAJOR,MINOR,BUILD,__DATE__,__TIME__);
 }
 
 const char *TA_GetVersionMajor( void )
@@ -69,11 +64,6 @@ const char *TA_GetVersionMinor( void )
 const char *TA_GetVersionBuild( void )
 {
    return BUILD;
-}
-
-const char *TA_GetVersionExtra( void )
-{
-   return EXTRA;
 }
 
 const char *TA_GetVersionDate( void )

@@ -18,7 +18,7 @@
 \brief Implements the XlfException class hierarchy.
 */
 
-// $Id$
+// $Id: XlfException.cpp 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfException.h>
 

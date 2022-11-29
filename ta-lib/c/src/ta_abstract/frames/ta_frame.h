@@ -51,15 +51,6 @@
 #endif
 
 
-/* Generated */ TA_RetCode TA_ACCBANDS_FramePP( const TA_ParamHolderPriv *params,
-/* Generated */                           int            startIdx,
-/* Generated */                           int            endIdx,
-/* Generated */                           int           *outBegIdx,
-/* Generated */                           int           *outNBElement )
-;
-/* Generated */ unsigned int TA_ACCBANDS_FramePPLB( const TA_ParamHolderPriv *params )
-;
-
 /* Generated */ TA_RetCode TA_ACOS_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,
@@ -175,15 +166,6 @@
 /* Generated */                           int           *outNBElement )
 ;
 /* Generated */ unsigned int TA_AVGPRICE_FramePPLB( const TA_ParamHolderPriv *params )
-;
-
-/* Generated */ TA_RetCode TA_AVGDEV_FramePP( const TA_ParamHolderPriv *params,
-/* Generated */                           int            startIdx,
-/* Generated */                           int            endIdx,
-/* Generated */                           int           *outBegIdx,
-/* Generated */                           int           *outNBElement )
-;
-/* Generated */ unsigned int TA_AVGDEV_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
 /* Generated */ TA_RetCode TA_BBANDS_FramePP( const TA_ParamHolderPriv *params,
@@ -922,15 +904,6 @@
 /* Generated */                           int           *outNBElement )
 ;
 /* Generated */ unsigned int TA_HT_TRENDMODE_FramePPLB( const TA_ParamHolderPriv *params )
-;
-
-/* Generated */ TA_RetCode TA_IMI_FramePP( const TA_ParamHolderPriv *params,
-/* Generated */                           int            startIdx,
-/* Generated */                           int            endIdx,
-/* Generated */                           int           *outBegIdx,
-/* Generated */                           int           *outNBElement )
-;
-/* Generated */ unsigned int TA_IMI_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
 /* Generated */ TA_RetCode TA_KAMA_FramePP( const TA_ParamHolderPriv *params,

@@ -1,4 +1,4 @@
-/* TA-LIB Copyright (c) 1999-2008, Mario Fortier
+/* TA-LIB Copyright (c) 1999-2007, Mario Fortier
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or
@@ -37,7 +37,6 @@
  *  -------------------------------------------------------------------
  *  MF       Mario Fortier
  *  AC       Angelo Ciceri
- *  AB       Anatoliy Belsky
  *
  *
  * Change history:
@@ -48,8 +47,6 @@
  *  090404 MF   Add test_candlestick
  *  110206 AC   Change volume and open interest to double
  *  122506 MF   Add MININDEX,MAXINDEX,MINMAX and MINMAXINDEX.
- *  101812 AB   Add AVGDEV.
- *  101912 AB   Add IMI.
  */
 
 /* Description:
@@ -258,7 +255,6 @@ static ErrorNumber testTAFunction_ALL( void )
    DO_TEST( test_func_per_hlc,  "CCI,WILLR,ULTOSC,NATR" );
    DO_TEST( test_func_per_ohlc, "BOP,AVGPRICE" );
    DO_TEST( test_func_rsi,      "RSI,CMO" );
-   DO_TEST( test_func_imi, "IMI" );
    DO_TEST( test_func_minmax,   "MIN,MAX,MININDEX,MAXINDEX,MINMAX,MINMAXINDEX" );
    DO_TEST( test_func_po,       "PO,APO" );
    DO_TEST( test_func_adx,      "ADX,ADXR,DI,DM,DX" );
@@ -271,7 +267,6 @@ static ErrorNumber testTAFunction_ALL( void )
    DO_TEST( test_func_mom_roc,  "MOM,ROC,ROCP,ROCR,ROCR100" );
    DO_TEST( test_func_trange,   "TRANGE,ATR" );
    DO_TEST( test_func_stddev,   "STDDEV,VAR" );
-   DO_TEST( test_func_avgdev,   "AVGDEV" );
    DO_TEST( test_func_bbands,   "BBANDS" );
    DO_TEST( test_candlestick,   "All Candlesticks" );
 

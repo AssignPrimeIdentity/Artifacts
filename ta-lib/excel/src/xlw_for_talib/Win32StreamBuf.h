@@ -19,7 +19,7 @@
  * \ingroup utils
  */
 
-// $Id$
+// $Id: Win32StreamBuf.h 154 2003-04-20 04:53:06Z fortier $
 
 #ifndef INC_Win32StreamBuf_H
 #define INC_Win32StreamBuf_H

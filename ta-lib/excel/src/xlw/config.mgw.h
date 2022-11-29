@@ -14,7 +14,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-// $Id$
+// $Id: config.mgw.h 152 2003-04-20 04:42:47Z fortier $
 
 #ifndef xlw_config_mgw_h
 #define xlw_config_mgw_h

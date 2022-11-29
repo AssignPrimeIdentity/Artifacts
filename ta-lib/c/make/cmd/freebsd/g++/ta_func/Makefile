@@ -34,7 +34,6 @@ CXXFLAGS += $(CUSERFLAGS)
 
 HEADERS =	
 SOURCES =	../../../../../src/ta_func/ta_utility.c \
-		../../../../../src/ta_func/ta_ACCBANDS.c \
 		../../../../../src/ta_func/ta_ACOS.c \
 		../../../../../src/ta_func/ta_AD.c \
 		../../../../../src/ta_func/ta_ADD.c \
@@ -194,7 +193,6 @@ SOURCES =	../../../../../src/ta_func/ta_utility.c \
 		../../../../../src/ta_func/ta_WILLR.c \
 		../../../../../src/ta_func/ta_WMA.c
 OBJECTS =	../../../../../temp/cmd/ta_utility.o \
-		../../../../../temp/cmd/ta_ACCBANDS.o \
 		../../../../../temp/cmd/ta_ACOS.o \
 		../../../../../temp/cmd/ta_AD.o \
 		../../../../../temp/cmd/ta_ADD.o \
@@ -408,9 +406,6 @@ clean:
 
 ../../../../../temp/cmd/ta_utility.o: ../../../../../src/ta_func/ta_utility.c
 	$(CC) -c $(CFLAGS) $(INCPATH) -o ../../../../../temp/cmd/ta_utility.o ../../../../../src/ta_func/ta_utility.c
-
-../../../../../temp/cmd/ta_ACCBANDS.o: ../../../../../src/ta_func/ta_ACCBANDS.c
-	$(CC) -c $(CFLAGS) $(INCPATH) -o ../../../../../temp/cmd/ta_ACCBANDS.o ../../../../../src/ta_func/ta_ACCBANDS.c
 
 ../../../../../temp/cmd/ta_ACOS.o: ../../../../../src/ta_func/ta_ACOS.c
 	$(CC) -c $(CFLAGS) $(INCPATH) -o ../../../../../temp/cmd/ta_ACOS.o ../../../../../src/ta_func/ta_ACOS.c

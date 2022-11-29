@@ -18,7 +18,7 @@
 \brief Implements the XlfCmdDesc class.
 */
 
-// $Id$
+// $Id: XlfCmdDesc.cpp 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/XlfCmdDesc.h>
 #include <xlw/XlfOper.h>

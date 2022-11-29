@@ -18,7 +18,7 @@
 \brief Implements the XlfOper class.
 */
 
-// $Id$
+// $Id: XlfOper.cpp 1420 2007-03-18 04:30:40Z fortier $
 
 #include <xlw/XlfOper.h>
 #include <xlw/XlfException.h>

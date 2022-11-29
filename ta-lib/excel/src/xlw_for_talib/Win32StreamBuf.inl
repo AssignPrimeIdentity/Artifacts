@@ -19,7 +19,7 @@
  * \group utils
  */
 
-// $Id$
+// $Id: Win32StreamBuf.inl 154 2003-04-20 04:53:06Z fortier $
 
 #ifdef NDEBUG
 #define INLINE inline

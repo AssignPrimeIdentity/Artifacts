@@ -14,7 +14,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-// $Id$
+// $Id: xlw.h 152 2003-04-20 04:42:47Z fortier $
 
 #ifndef INC_Excel32_H
 #define INC_Excel32_H

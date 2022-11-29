@@ -21,7 +21,7 @@
 \brief Declares XlfException class hierarchy.
 */
 
-// $Id$
+// $Id: XlfException.h 152 2003-04-20 04:42:47Z fortier $
 
 #include <xlw/EXCEL32_API.h>
 #include <string>

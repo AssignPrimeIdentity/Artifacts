@@ -26,7 +26,7 @@ causes C4786 to reappear even though you already deactivated it. see
 http://www.deja.com for more information about C4786.
 */
 
-// $Id$
+// $Id: pragmas.h 152 2003-04-20 04:42:47Z fortier $
 
 #if defined(DEBUG_HEADERS)
 #pragma DEBUG_HEADERS
